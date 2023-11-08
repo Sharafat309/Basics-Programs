@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int start, end;
+    double sum = 0;
+
+    cout << "Enter the start of the list: ";
+    cin >> start;
+    cout << "Enter the end of the list: ";
+    cin >> end;
+
+    
+    if (start > end) {
+        cout << "Error: Start should be less than or equal to End." << endl;
+    }
+    else {
+        for (int i = start; i <= end; i++) {
+            sum += i;
+        }
+
+        cout << "The sum of integers from " << start << " to " << end << " is: " << sum << endl;
+    }
+    system("pause");
+    return 0;
+}
