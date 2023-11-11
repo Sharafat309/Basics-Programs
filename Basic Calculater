@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+int main() {
+	double number1, number2;
+	char n;
+	char operater;
+	do
+	 {
+		cout << "Enter Ist number, Operater and 2nd number:";
+		cin >> number1 >> operater >> number2;
+	
+		if (number1 > -INFINITY && number2<+INFINITY && operater == '-' || operater == '+' || operater == '*' || operater == '/' && number2>-INFINITY && number2 < +INFINITY) 
+		{
+			if (operater == '-') {
+				cout << number1 - number2 << endl;
+			}
+			else if (operater == '+') {
+				cout << number1 + number2 << endl;
+			}
+			else if (operater == '*') {
+				cout << number1 * number2 << endl;
+			}
+			else {
+				cout << number1 / number2 << endl;
+
+			}
+			cout << "Do you want to continue.(Y or N)";
+			cin >> n;
+		}
+		else {
+			cout << "please Enter correct data.";
+		}
+	} while (n == 'Y' || n == 'y');
+	system("pause");
+	return 0;
+}
