@@ -1,0 +1,17 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main() 
+{
+	int radius;
+	float volume;
+	float pi=3.14;
+	cout << "Enter the Radius of given sphere:";
+	cin >> radius;
+	volume = (4 * pi * radius*radius*radius)/3;
+	cout << "The Volume of given Sphere is:" << volume << endl;
+
+	system("pause");
+	return 0;
+}
