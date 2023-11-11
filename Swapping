@@ -1,0 +1,20 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main() 
+{
+	int num1, num2,tmpSwapp;
+	cout << "Enter the Ist Number:";
+	cin >> num1;
+	cout << "Enter the 2nd Number:";
+	cin >> num2;
+	cout << "The Ist Number is " << num1 << " and 2nd is " << num2 << endl;
+	tmpSwapp = num2;
+	num2 = num1;
+	num1 = tmpSwapp;
+	cout << "After Swaping\n";
+	cout << "The Ist number is " << num1 << " and 2nd is " << num2;
+	system("pause");
+	return 0;
+}
