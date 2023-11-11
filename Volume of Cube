@@ -1,0 +1,15 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main() 
+{
+	float length;
+	double volume;
+	cout << "Enter length or hight or width of Cube:";
+	cin >> length;
+	volume = length *length*length;
+	cout << "The Volume of Given Circle is:" << volume << endl;
+	system("pause");
+	return 0;
+}
