@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+int main() 
+{
+	int Years, months, Weeks, Days, remaining;
+	cout << "Enter days:";
+	cin >> Days;
+	Years = Days / 365;
+	remaining = Days % 365;
+	cout << "Years are:" << Years<<endl;
+
+	months = remaining / 30;
+	remaining = remaining % 30;
+	cout << "Months are:" << months<<endl;
+
+	Weeks = remaining / 7;
+	remaining = remaining % 7;
+	cout << "Weeks are:"<<Weeks<<endl;
+
+	Days = remaining;
+	cout << "Days are:" << Days << endl;
+
+	system("pause");
+	return 0;
+}
