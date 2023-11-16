@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string userChoice1, userChoice2;
+    int userChoice, dueDate = 5, userDate, fine = 0;
+
+    cout << "Hello! Please choose an option:\n";
+    cout << "0 - Return a book\n";
+    cout << "1 - Borrow a book\n";
+    cin >> userChoice;
+
+    if (userChoice == 1) {
+        cout << "Enter the name of the book you want to borrow: ";
+        cin.ignore();
+        getline(cin, userChoice1);
+
+        cout << "You have borrowed: " << userChoice1 << endl;
+        cout << "Attention!\n";
+        cout << "If you fail to return the book on time, you will be fined $1 per day.\n";
+    }
+    else if (userChoice == 0) {
+        cout << "Enter the name of the book you want to return: ";
+        cin.ignore();
+        getline(cin, userChoice2);
+
+        cout << "You have returned: " << userChoice2 << endl;
+
+        cout << "Enter the number of days the book was borrowed for: ";
+        cin >> userDate;
+
+        if (userDate > dueDate) {
+            fine = (userDate - dueDate);
+            cout << "Please pay a fine of $" << fine << " as you returned the book " << fine << " days late.\n";
+            cout << "($1 per day)\n";
+        }
+    }
+    else {
+        cout << "Invalid input. Please enter 0 or 1.\n";
+    }
+
+    cout << endl;
+    system("pause");
+    return 0;
+}
