@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	char User_Choice;
+	do {
+		int start, end, n = 0, count = 0;
+		
+		cout << "Enter your Number: ";
+		cin >> n;
+		/*cout << "Enter the Start of list:";
+		cin >> start;
+		cout << "Enter the End of List:";*/
+		for (int i = 1; i <= n; i++)
+		{
+			if (n % i == 0)
+			{
+				count++;
+			}
+
+		}
+		if (count == 2)
+		{
+			cout << "The Given  number is Prime.";
+
+		}
+		else
+		{
+			cout << "The Given Number is not a Prime Number.\n";
+		}
+		cout << "Check another Number(Y/N):";
+		cin >> User_Choice;
+	} while (User_Choice== 'y' || 'Y');
+	return 0;
+}
