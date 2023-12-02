@@ -1,0 +1,61 @@
+#include<iostream>
+using namespace std;
+
+int sum(int x,int y);
+int Multiply(int x, int y);
+int Subtraction(int x, int y);
+int Division(int x, int y);
+
+int main()
+{
+	int x,y;
+	char operater,User_Input;
+	do
+	{
+	cout << "Enter the 1st number:";
+	cin >> x;
+	cout << "Enter '+' For Addition\n'-' For Subtraction\n'*' For Multiply\n'/' For Divsion:";
+	cin >> operater;
+	cout << "Enter 2nd Number : ";
+	cin >> y;
+	switch (operater)
+	{ 
+	    case '+':	cout << "Sum is :" << sum(x, y) << endl;
+			break;
+	    case '-':    cout << "Subtraction is:" << Subtraction(x, y) << endl;
+			break;
+		case '*':cout << "Multiply is :" << Multiply(x, y) << endl;
+			break;
+		case'/':cout << "Division is :" << Division(x, y) << endl;
+			break;
+
+		default: cout << "Plz Enter the Correct Input.";
+		break;
+	}
+
+	cout << "Do you want continue(Y/N):";
+	cin >> User_Input;
+	
+	
+	} while (User_Input=='Y'||User_Input=='y');
+	system("pause");
+	return 0;
+}
+int sum(int x, int y)
+{
+	int sumResult;
+	sumResult = x + y;
+	return sumResult;
+}
+int Multiply(int x, int y)
+{
+	return x * y;
+}
+int Subtraction(int x,int y)
+{
+	return x - y;
+}
+int Division(int x, int y)
+{
+	return x / y;
+}
